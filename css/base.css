@@ -1,0 +1,118 @@
+@page {
+  size: A4 portrait;
+  margin: 16mm 14mm 18mm 14mm;
+  background-color: var(--color-bg-page);
+  @bottom-right {
+    content: "Page " counter(page) " / " counter(pages);
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+  @bottom-left {
+    content: "HIVE4DX — Référentiel Interne de Pilotage";
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+}
+
+@page landscape-page {
+  size: A4 landscape;
+  margin: 14mm 14mm 16mm 14mm;
+  background-color: var(--color-bg-page);
+  @bottom-right {
+    content: "Page " counter(page) " / " counter(pages);
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+  @bottom-left {
+    content: "HIVE4DX — Annexe de Pilotage";
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  line-height: 1.45;
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-page);
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+.landscape-section {
+  page-break-before: always;
+  page: landscape-page;
+}
+
+/* PDF Preview Mode (Screen-only) */
+@media screen {
+  body {
+    background-color: var(--color-bg-viewer);
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page {
+    background: var(--color-bg-card);
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm 15mm 20mm 15mm;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .page.landscape {
+    width: 297mm;
+    min-height: 210mm;
+    padding: 15mm 15mm 18mm 15mm;
+  }
+
+  .screen-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+    padding-top: 5px;
+  }
+}
+
+@media print {
+  .screen-footer {
+    display: none;
+  }
+  .page {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    width: auto;
+    min-height: auto;
+    display: block;
+  }
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portail HIVE4DX — consulter, modifier et exporter les documents officiels de pilotage et d'alternance."
+    />
+    <title>HIVE4DX — Générateur de Documents &amp; Pilotage Alternance</title>
+    <link rel="icon" type="image/png" href="assets/Hive4DX_Icon@2x.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-header">
+      <div class="brand-header">
+        <img
+          class="brand-icon"
+          src="assets/Hive4DX_Icon@2x.png"
+          alt="HIVE4DX Icon"
+        />
+        <div class="brand-text-group">
+          <img
+            class="brand-logo"
+            src="assets/Hive4DX_Black_Transparent@2x.png"
+            alt="HIVE4DX"
+          />
+          <div class="brand-tagline">Hive for Digital Experience</div>
+        </div>
+      </div>
+      <h1>Portail de Gestion &amp; Génération Documentaire</h1>
+      <p>
+        Sélectionne le document à consulter, modifier ou exporter en PDF
+        officiel.
+      </p>
+    </div>
+
+    <div id="documents-container">
+      <!-- Les documents seront chargés ici dynamiquement -->
+    </div>
+
+    <script type="module">
+      const container = document.getElementById("documents-container");
+
+      function renderDocuments(docs) {
+        container.innerHTML = docs
+          .map((doc) => {
+            if (doc.status === "active") {
+              return `
+                <a href="${doc.url}" target="_blank" class="doc-card clickable-card">
+                  <div class="doc-info">
+                    <h2>${doc.title}</h2>
+                    <p>${doc.description}</p>
+                  </div>
+                </a>
+              `;
+            } else {
+              return `
+                <div class="doc-card doc-card--upcoming">
+                  <div class="doc-info">
+                    <h2>${doc.title}</h2>
+                    <p>${doc.description}</p>
+                  </div>
+                </div>
+              `;
+            }
+          })
+          .join("");
+      }
+
+      // Fallback inline data — used when fetch fails (file:// protocol)
+      const FALLBACK_DOCS = [
+        {
+          id: "livret-sanaa",
+          title:
+            "Livret de Cadrage, Pilotage & Alternance (Sanaa SHAHUL HAMEED)",
+          description:
+            "<strong>Version :</strong> 1.0 — Inclut le Gantt, la RACI, le registre des risques et les KPI.",
+          url: "livret-sanaa.html",
+          status: "active",
+        },
+        {
+          id: "facture-proposition",
+          title: "Modèle de Facture / Proposition Commerciale HIVE4DX",
+          description:
+            "<strong>Statut :</strong> Bientôt disponible dans le dépôt Git.",
+          url: "#",
+          status: "upcoming",
+        },
+      ];
+
+      async function loadDocuments() {
+        try {
+          const res = await fetch("./config/documents.json");
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const docs = await res.json();
+          renderDocuments(docs);
+        } catch (err) {
+          console.info(
+            "[dashboard] Fetch fallback (file:// context). Using inline data.",
+            err.message,
+          );
+          renderDocuments(FALLBACK_DOCS);
+        }
+      }
+
+      loadDocuments();
+    </script>
+  </body>
+</html>

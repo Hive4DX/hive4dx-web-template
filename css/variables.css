@@ -1,0 +1,49 @@
+/* Google Fonts loaded via <link> in HTML <head> for non-blocking rendering */
+
+:root {
+  /* Colors */
+  --color-primary-blue: #0a4c84;
+  --color-primary-blue-dark: #08396a;
+  --color-primary-green: #237a48;
+  --color-accent-green: #84c255;
+  
+  --color-text-dark: #2d3748;
+  --color-text-muted: #718096;
+  --color-text-light: #4a5568;
+  
+  --color-bg-page: #fafafc;
+  --color-bg-card: #ffffff;
+  --color-bg-gray: #edf2f7;
+  --color-bg-viewer: #525659;
+  
+  --color-border: #e2e8f0;
+  --color-border-dark: #cbd5e0;
+  
+  /* Fonts */
+  --font-family-sans: "Inter", Arial, sans-serif;
+  
+  /* Font Sizes (Rounded, no decimals) */
+  --font-size-xs: 8pt;
+  --font-size-sm: 9pt;
+  --font-size-md: 10pt;
+  --font-size-lg: 11pt;
+  --font-size-xl: 12pt;
+  --font-size-title-sm: 15pt;
+  --font-size-title-md: 18pt;
+  --font-size-title-lg: 24pt;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}

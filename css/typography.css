@@ -1,0 +1,89 @@
+/*
+ * typography.css
+ * Global typographic rules: headings, body text, lists, tables, code.
+ * Imported by: livret-sanaa.html
+ */
+
+/* ── Headings ──────────────────────────────────────────────── */
+h1 {
+  color: var(--color-primary-blue);
+  font-size: var(--font-size-title-sm);
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-primary-green);
+  padding-bottom: var(--space-1);
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+  page-break-after: avoid;
+}
+
+h2 {
+  color: var(--color-primary-blue);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  page-break-after: avoid;
+}
+
+h3 {
+  color: var(--color-text-dark);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-1);
+  page-break-after: avoid;
+}
+
+/* ── Body text & lists ─────────────────────────────────────── */
+p,
+li {
+  font-size: var(--font-size-sm);
+  margin-bottom: 7px;
+  color: var(--color-text-dark);
+}
+
+ul,
+ol {
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-2);
+  padding-left: 18px;
+}
+
+/* ── Tables ────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-2);
+  margin-bottom: 14px;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid var(--color-border);
+  padding: 6px var(--space-2);
+  text-align: left;
+  font-size: var(--font-size-xs);
+}
+
+th {
+  background-color: var(--color-primary-blue);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* ── Code ──────────────────────────────────────────────────── */
+code {
+  background-color: var(--color-bg-gray);
+  color: var(--color-primary-blue);
+  padding: 2px var(--space-1);
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: var(--font-size-xs);
+}

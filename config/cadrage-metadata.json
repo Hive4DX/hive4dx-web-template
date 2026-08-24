@@ -1,0 +1,25 @@
+{
+  "document": {
+    "title": "RÉFÉRENTIEL INTERNE DE CADRAGE & PILOTAGE D'ALTERNANCE",
+    "subtitle": "Feuille de Route, Gouvernance, Indicateurs de Performance, Conformité & Matrice de Recette",
+    "version": "1.0 (Référentiel Interne)",
+    "date": "Mai 2026",
+    "status": "Document Interne de Pilotage Opérationnel",
+    "nextReview": "Bilan Trimestriel 1 (Novembre 2026)"
+  },
+  "student": {
+    "name": "Sanaa SHAHUL HAMEED",
+    "role": "Graphiste & Designer Multimédia"
+  },
+  "company": {
+    "name": "HIVE4DX (SASU)",
+    "tutor": "Chabir Ahamed MOUHAMAD",
+    "tutorTitle": "Président & Maître d'Apprentissage"
+  },
+  "cfa": {
+    "name": "STUDI — Graduate Graphiste et communication visuelle (RNCP Niv. 5)"
+  },
+  "contract": {
+    "period": "Mai 2026 – Fin Août 2027 (Examens du Diplôme : Fin Juin 2027)"
+  }
+}

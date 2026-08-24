@@ -1,0 +1,18 @@
+[
+  {
+    "id": "livret-sanaa",
+    "title": "Livret de Cadrage, Pilotage & Alternance (Sanaa SHAHUL HAMEED)",
+    "description": "<strong>Version :</strong> 1.0 — Inclut le Gantt, la RACI, le registre des risques et les KPI.",
+    "url": "livret-sanaa.html",
+    "status": "active",
+    "buttonText": "Ouvrir le Template"
+  },
+  {
+    "id": "facture-proposition",
+    "title": "Modèle de Facture / Proposition Commerciale HIVE4DX",
+    "description": "<strong>Statut :</strong> Bientôt disponible dans le dépôt Git.",
+    "url": "#",
+    "status": "upcoming",
+    "buttonText": "Template à venir"
+  }
+]
