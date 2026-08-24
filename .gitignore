@@ -1,0 +1,11 @@
+# Fichiers à ignorer dans Git
+node_modules/
+dist/
+.DS_Store
+
+# Fichiers PDF générés (exports — ne pas versionner)
+*.pdf
+
+# Logs
+npm-debug.log*
+vite.log
