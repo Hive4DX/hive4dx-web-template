@@ -1,0 +1,281 @@
+[
+  {
+    "id_phase": "PHASE-01",
+    "nom_phase": "Phase 1 — Onboarding, Identité de marque & Brand Book",
+    "ordre_phase": 1,
+    "taches": [
+      {
+        "id_tache": "TASK-1.1",
+        "ordre_tache": 1,
+        "titre": "Onboarding, structuration de l'environnement et conformité légale",
+        "statut": "termine",
+        "echeance_debut": "11/05/2026",
+        "echeance_fin": "31/05/2026",
+        "description": "Mise en place du cadre de travail, organisation de l'arborescence Google Drive et création du registre de traçabilité des ressources.",
+        "procedures_pas_a_pas": [
+          "Créer et structurer le dossier de travail sur le Google Drive de HIVE4DX selon la nomenclature officielle : HIVE4DX_IdentiteMarque_BrandBook_[AAAA-MM-JJ].",
+          "Initialiser un tableau Google Sheets 'Registre_Ressources_Licences' répertoriant chaque police, image et actif externe (URL source, type de licence libre/OFL, auteur).",
+          "Définir la charte d'usage des outils d'IA générative (Adobe Firefly, Figma AI) dans le respect de la confidentialité HIVE4DX et du RGPD.",
+          "Configurer l'espace de travail Figma HIVE4DX avec une organisation stricte des projets (01_Research, 02_Drafts, 03_Components, 04_Deliverables)."
+        ]
+      },
+      {
+        "id_tache": "TASK-1.2",
+        "ordre_tache": 2,
+        "titre": "Analyse du besoin, immersion B2B et benchmark sectoriel",
+        "statut": "termine",
+        "echeance_debut": "01/06/2026",
+        "echeance_fin": "30/06/2026",
+        "description": "S'imprégner de l'ADN de HIVE4DX (conseil en transformation numérique, Cloud, Salesforce) et analyser l'écosystème B2B.",
+        "procedures_pas_a_pas": [
+          "Analyser l'activité de l'entreprise, ses offres de service (Salesforce/Cloud) et définir le profil de la cible B2B (DSI, grands comptes, partenaires).",
+          "Réaliser un benchmark concurrentiel de 5 acteurs du conseil en ingénierie et cloud pour identifier les codes graphiques du secteur.",
+          "Synthétiser les opportunités de différenciation visuelle dans un document de cadrage soumis à validation tuteur."
+        ]
+      },
+      {
+        "id_tache": "TASK-1.3",
+        "ordre_tache": 3,
+        "titre": "Recherche d'inspiration et conception des Moodboards",
+        "statut": "termine",
+        "echeance_debut": "01/07/2026",
+        "echeance_fin": "31/07/2026",
+        "description": "Exploration artistique et validation de la direction créative auprès du tuteur.",
+        "procedures_pas_a_pas": [
+          "Mener une veille créative (Brand New, The Futur, Behance) pour collecter des visuels évoquant la modernité, la technicité et la fiabilité.",
+          "Assembler au moins deux planches d'inspiration (Moodboards) sous Figma ou Illustrator en articulant typographies, palettes et orientations stylistiques.",
+          "Présenter les moodboards lors du rituel hebdomadaire et sélectionner la piste définitive."
+        ]
+      },
+      {
+        "id_tache": "TASK-1.4",
+        "ordre_tache": 4,
+        "titre": "Conception de l'identité visuelle et rédaction du Brand Book",
+        "statut": "en_cours",
+        "echeance_debut": "01/08/2026",
+        "echeance_fin": "30/09/2026",
+        "description": "Création vectorielle du logo, définition de la charte et création du guide de marque officiel.",
+        "procedures_pas_a_pas": [
+          "Réaliser les croquis puis vectoriser le logo HIVE4DX sous Illustrator (versions principale, monochrome, favicon, déclinaisons sombres/claires).",
+          "Définir la charte chromatique (HEX, RVB, CMJN) en vérifiant la conformité des contrastes aux normes WCAG AA.",
+          "Fixer les typographies officielles (titres, corps de texte, code) et les règles d'interlignage.",
+          "Rédiger le Brand Book complet (PDF et version Figma) intégrant les règles d'usage, espaces d'exclusion et 'Do & Don't'."
+        ]
+      },
+      {
+        "id_tache": "TASK-1.5",
+        "ordre_tache": 5,
+        "titre": "Déclinaison des supports corporate, plaquette InDesign et masques de présentation",
+        "statut": "a_faire",
+        "echeance_debut": "01/10/2026",
+        "echeance_fin": "31/10/2026",
+        "description": "Création des éléments de communication interne/externe et modèles opérationnels.",
+        "procedures_pas_a_pas": [
+          "Concevoir un deck Google Slides master contenant 15 masques types (couverture, sommaire, texte/image, schémas techniques, KPI).",
+          "Créer la plaquette commerciale 4 pages sous Adobe InDesign (gabarits, styles de paragraphes, fonds perdus 3mm, export PDF/X-1a et vérification du BAT).",
+          "Réaliser les cartes de visite vectorielles et signatures e-mail HTML responsives.",
+          "Générer un kit média complet d'actifs exportés (PNG, SVG, PDF)."
+        ]
+      },
+      {
+        "id_tache": "TASK-1.6",
+        "ordre_tache": 6,
+        "titre": "Validation (DoD), Fiche de Recette et capitalisation Logbook RNCP",
+        "statut": "a_faire",
+        "echeance_debut": "01/11/2026",
+        "echeance_fin": "15/11/2026",
+        "description": "Contrôle qualité du livrable, soumission à recette et rédaction de la fiche d'étude de cas pour le diplôme.",
+        "procedures_pas_a_pas": [
+          "Passer la grille Definition of Done (DoD) : nommage des fichiers, légèreté des exportations, respect des contrastes et de la charte.",
+          "Remplir et soumettre la 'Fiche de Recette de Livrable' au tuteur pour signature (Validation sans réserve / avec réserve).",
+          "Rédiger la première fiche d'étude de cas dans le Logbook RNCP en détaillant le contexte, la méthodologie créative, les contraintes et les résultats."
+        ]
+      }
+    ]
+  },
+  {
+    "id_phase": "PHASE-02",
+    "nom_phase": "Phase 2 — Design System UI/UX, Prototypage Figma & Web",
+    "ordre_phase": 2,
+    "taches": [
+      {
+        "id_tache": "TASK-2.1",
+        "ordre_tache": 1,
+        "titre": "Inventaire UI, stratégie d'Atomic Design et Tokens sous Figma",
+        "statut": "a_faire",
+        "echeance_debut": "16/11/2026",
+        "echeance_fin": "15/12/2026",
+        "description": "Cartographie des besoins d'interface et mise en place des variables globales.",
+        "procedures_pas_a_pas": [
+          "Lister les composants requis pour les interfaces web/cloud HIVE4DX (boutons, inputs, modales, tables de données).",
+          "Configurer les Design Tokens sous Figma (couleurs, espacements, typographies, ombres) via les Figma Variables.",
+          "Structurer la bibliothèque UI selon les principes de l'Atomic Design (Atomes, Molécules, Organismes)."
+        ]
+      },
+      {
+        "id_tache": "TASK-2.2",
+        "ordre_tache": 2,
+        "titre": "Construction de la bibliothèque de composants réutilisables",
+        "statut": "a_faire",
+        "echeance_debut": "16/12/2026",
+        "echeance_fin": "15/01/2027",
+        "description": "Production des composants avec Auto-Layout et gestion exhaustive des états.",
+        "procedures_pas_a_pas": [
+          "Concevoir les composants atomiques sous Figma avec Auto-Layout et gestion du responsive (Resizing).",
+          "Créer l'ensemble des variants et états pour chaque composant (Default, Hover, Focus, Active, Disabled, Error).",
+          "Documenter les règles d'implémentation pour les développeurs directement dans le panneau de documentation Figma."
+        ]
+      },
+      {
+        "id_tache": "TASK-2.3",
+        "ordre_tache": 3,
+        "titre": "Prototypage UX, Wireframing et maquettage haute fidélité",
+        "statut": "a_faire",
+        "echeance_debut": "16/01/2027",
+        "echeance_fin": "15/02/2027",
+        "description": "Modélisation des parcours utilisateurs clés et création des maquettes interactives.",
+        "procedures_pas_a_pas": [
+          "Dessiner les wireframes basse fidélité (Lo-Fi) des parcours utilisateurs critiques (ex : portail client, dashboards).",
+          "Assembler les maquettes haute fidélité (Hi-Fi) Desktop, Tablette et Mobile en appliquant le Design System.",
+          "Relier les écrans pour construire un prototype interactif dynamique avec animations et micro-interactions."
+        ]
+      },
+      {
+        "id_tache": "TASK-2.4",
+        "ordre_tache": 4,
+        "titre": "Intégration Web Front-End (HTML5/CSS3/JS) & WordPress",
+        "statut": "a_faire",
+        "echeance_debut": "16/02/2027",
+        "echeance_fin": "15/03/2027",
+        "description": "Mise en pratique du programme intégration web de la formation Studi.",
+        "procedures_pas_a_pas": [
+          "Transformer les maquettes Figma en pages web fonctionnelles et responsives (HTML5, CSS Flexbox/Grid).",
+          "Préparer le dossier de Handoff technique Figma pour les développeurs (export assets SVG, spécification des tokens CSS).",
+          "Dynamiser les formulaires et interactions avec JavaScript Vanilla.",
+          "Intégrer et personnaliser les blocs sur WordPress."
+        ]
+      },
+      {
+        "id_tache": "TASK-2.5",
+        "ordre_tache": 5,
+        "titre": "Tests d'accessibilité (WCAG), DoD et Fiche de Recette UI/UX",
+        "statut": "a_faire",
+        "echeance_debut": "16/03/2027",
+        "echeance_fin": "31/03/2027",
+        "description": "Audit de conformité numérique, recette et documentation dans le Logbook RNCP.",
+        "procedures_pas_a_pas": [
+          "Passer un audit d'accessibilité à l'aide de plugins Figma (Stark, Contrast) pour garantir le respect de la norme WCAG 2.1 AA.",
+          "Exécuter la grille DoD UI/UX (organisation des calques, composants détachés interdits, nommage des frames).",
+          "Soumettre la Fiche de Recette au tuteur et consigner l'étude de cas UI/UX dans le Logbook RNCP."
+        ]
+      }
+    ]
+  },
+  {
+    "id_phase": "PHASE-03",
+    "nom_phase": "Phase 3 — Infographies Cloud/Salesforce & Motion Design",
+    "ordre_phase": 3,
+    "taches": [
+      {
+        "id_tache": "TASK-3.1",
+        "ordre_tache": 1,
+        "titre": "Collecte, vulgarisation et schématisation d'architectures Cloud/Salesforce",
+        "statut": "a_faire",
+        "echeance_debut": "01/04/2027",
+        "echeance_fin": "30/04/2027",
+        "description": "Traduction visuelle des flux de données et architectures complexes pour les supports commerciaux.",
+        "procedures_pas_a_pas": [
+          "Mener des ateliers d'extraction d'information avec l'expert technique pour comprendre les architectures Salesforce/Cloud à illustrer.",
+          "Créer une banque de pictogrammes et d'icônes vectorielles personnalisées conformes à la charte HIVE4DX.",
+          "Modéliser en 3D isométrique (via Illustrator 3D/Figma) les blocs d'infrastructure Cloud/Salesforce pour un rendu moderne.",
+          "Mettre en page les infographies d'architecture (format horizontal pour présentations et vertical pour le web)."
+        ]
+      },
+      {
+        "id_tache": "TASK-3.2",
+        "ordre_tache": 2,
+        "titre": "Storyboard et production de contenus Motion Design (After Effects)",
+        "statut": "a_faire",
+        "echeance_debut": "01/05/2027",
+        "echeance_fin": "20/05/2027",
+        "description": "Animation des éléments visuels pour dynamiser les présentations et les réseaux sociaux.",
+        "procedures_pas_a_pas": [
+          "Rédiger les storyboards découpés (vignettes, intentions d'animation, timings) et faire valider par le tuteur.",
+          "Importer les actifs vectoriels dans Adobe After Effects et réaliser les animations (transitions, morphing, typographie animée).",
+          "Exporter les rendus vidéo aux formats requis (MP4 H.264, GIF animés, Lottie/JSON pour le web)."
+        ]
+      },
+      {
+        "id_tache": "TASK-3.3",
+        "ordre_tache": 3,
+        "titre": "Livraison du pack média, Fiche de Recette et bilan de phase",
+        "statut": "a_faire",
+        "echeance_debut": "21/05/2027",
+        "echeance_fin": "31/05/2027",
+        "description": "Archivage structuré des projets sources et mise à jour du dossier d'examen.",
+        "procedures_pas_a_pas": [
+          "Vérifier le rassemblement des fichiers sources (.ai, .aep) dans l'arborescence Google Drive avec dépendances liées.",
+          "Faire signer la Fiche de Recette pour le bloc Multimédia.",
+          "Compléter la section 'Production Multimédia & Vulgarisation Technique' dans le Logbook RNCP."
+        ]
+      }
+    ]
+  },
+  {
+    "id_phase": "PHASE-04",
+    "nom_phase": "Phase 4 — Préparation à l'examen RNCP & Soutenances Studi",
+    "ordre_phase": 4,
+    "taches": [
+      {
+        "id_tache": "TASK-4.1",
+        "ordre_tache": 1,
+        "titre": "Consolidation du Portfolio web/PDF et revue du Logbook d'apprentissage",
+        "statut": "a_faire",
+        "echeance_debut": "01/06/2027",
+        "echeance_fin": "15/06/2027",
+        "description": "Finalisation du dossier de compétences professionnelles à présenter au jury.",
+        "procedures_pas_a_pas": [
+          "Mapper chaque réalisation d'entreprise avec la grille des compétences RNCP Studi.",
+          "Mettre en page le portfolio final (site web ou PDF interactif) mettant en valeur les 3 études de cas phares (Brand Book, UI/UX, Motion).",
+          "Effectuer une relecture croisée du Logbook avec le tuteur pour corriger les éventuels écarts de forme ou de fond."
+        ]
+      },
+      {
+        "id_tache": "TASK-4.2",
+        "ordre_tache": 2,
+        "titre": "Simulations de soutenance orale et préparation des supports de présentation",
+        "statut": "a_faire",
+        "echeance_debut": "16/06/2027",
+        "echeance_fin": "30/06/2027",
+        "description": "Entraînement en conditions réelles d'examen devant le tuteur.",
+        "procedures_pas_a_pas": [
+          "Concevoir le support de présentation orale de l'examen (Google Slides / Pitch Deck d'examen de 30 diapositives).",
+          "Conduire deux séances de soutenance à blanc chronométrées avec le tuteur, suivies de sessions de debriefing.",
+          "Finaliser et déposer le dossier complet sur la plateforme académique Studi avant la date limite."
+        ]
+      }
+    ]
+  },
+  {
+    "id_phase": "PHASE-05",
+    "nom_phase": "Phase 5 — Clôture opérationnelle & Passation des actifs",
+    "ordre_phase": 5,
+    "taches": [
+      {
+        "id_tache": "TASK-5.1",
+        "ordre_tache": 1,
+        "titre": "Audit final des repositories, transfert de compétences et bilan d'alternance",
+        "statut": "a_faire",
+        "echeance_debut": "01/07/2027",
+        "echeance_fin": "31/08/2027",
+        "description": "Passation intégrale du patrimoine graphique à HIVE4DX et clôture du contrat.",
+        "procedures_pas_a_pas": [
+          "Nettoyer et consolider l'intégralité des espaces Figma, Drive et Adobe Creative Cloud de la société.",
+          "Rédiger un 'Guide de Maintenance Graphique' pour permettre à l'équipe de faire évoluer les supports en toute autonomie.",
+          "Organiser une réunion de passation finale et dresser le bilan d'atteinte des KPIs opérationnels.",
+          "Clôturer administrativement le dossier d'alternance HIVE4DX / Studi."
+        ]
+      }
+    ]
+  }
+]

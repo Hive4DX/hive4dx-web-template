@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feuille de Route du Projet - Hive4DX</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      h1 {
+        color: #1a252f;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+
+      .phase-container {
+        margin-bottom: 30px;
+        background: #ffffff;
+        border: 1px solid #dcdfe6;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .phase-title {
+        font-size: 1.4em;
+        color: #0d47a1;
+        margin-top: 0;
+        border-bottom: 1px solid #e3f2fd;
+        padding-bottom: 8px;
+      }
+
+      .task-card {
+        background: #fafafa;
+        border: 1px solid #e1e8ed;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 15px;
+      }
+
+      .task-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .task-title {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #2c3e50;
+        margin: 0;
+      }
+
+      .badge {
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+
+      .status-a_faire {
+        background: #fff3cd;
+        color: #856404;
+      }
+
+      .status-en_cours {
+        background: #d1ecf1;
+        color: #0c5460;
+      }
+
+      .status-termine {
+        background: #d4edda;
+        color: #155724;
+      }
+
+      .procedure {
+        background: #f1f3f5;
+        border-left: 3px solid #3498db;
+        padding: 10px 14px;
+        margin-top: 12px;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .procedure h4 {
+        margin: 0 0 6px 0;
+        font-size: 0.95em;
+        color: #2c3e50;
+      }
+
+      .procedure ol {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .procedure li {
+        margin-bottom: 4px;
+        font-size: 0.9em;
+      }
+
+      .meta-info {
+        font-size: 0.85em;
+        color: #6c757d;
+        margin-top: 8px;
+      }
+
+      .error {
+        color: #d9534f;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Feuille de Route & Procédures Opérationnelles</h1>
+    <div id="tasks-container">Chargement des données...</div>
+
+    <script>
+      async function loadTasks() {
+        const container = document.getElementById("tasks-container");
+
+        try {
+          const response = await fetch("./config/tasks.json");
+          if (!response.ok) {
+            throw new Error(`Erreur HTTP: ${response.status}`);
+          }
+          const data = await response.json();
+          renderPhases(data);
+        } catch (error) {
+          container.innerHTML = `<p class="error">Impossible de charger le fichier JSON : ${error.message}</p>
+        <p>Assure-toi de lancer la page depuis un serveur local (ex: via VS Code Live Server).</p>`;
+        }
+      }
+
+      // Dans index.html, la fonction renderPhases s'assure du bon ordre d'affichage :
+      function renderPhases(phases) {
+        const container = document.getElementById("tasks-container");
+        container.innerHTML = "";
+
+        phases.sort((a, b) => a.ordre_phase - b.ordre_phase);
+
+        phases.forEach((phase) => {
+          const phaseDiv = document.createElement("div");
+          phaseDiv.className = "phase-container";
+
+          let tasksHtml = "";
+
+          // Tri sur l'ordre de la tâche
+          phase.taches.sort((a, b) => a.ordre_tache - b.ordre_tache);
+
+          phase.taches.forEach((task) => {
+            const stepsList = task.procedures_pas_a_pas
+              .map((step) => `<li>${step}</li>`)
+              .join("");
+
+            tasksHtml += `
+        <div class="task-card">
+          <div class="task-header">
+            <h3 class="task-title">${task.id_tache} — ${task.titre}</h3>
+            <span class="badge status-${task.statut}">${task.statut.replace("_", " ").toUpperCase()}</span>
+          </div>
+          <p style="margin: 8px 0; font-size: 0.95em;">${task.description}</p>
+          <div class="procedure">
+            <h4>Procédure pas à pas :</h4>
+            <ol>${stepsList}</ol>
+          </div>
+          <div class="meta-info">
+            <strong>Période :</strong> Du ${task.echeance_debut} au ${task.echeance_fin}
+          </div>
+        </div>
+      `;
+          });
+
+          phaseDiv.innerHTML = `
+      <h2 class="phase-title">${phase.nom_phase}</h2>
+      ${tasksHtml}
+    `;
+
+          container.appendChild(phaseDiv);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", loadTasks);
+    </script>
+  </body>
+</html>
